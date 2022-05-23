@@ -2,6 +2,12 @@
 
 A "Hello, World!" style golang application that exposes `localhost:8080/hello` for use while working through *Kubernetes in Action*. A Dockerfile is included to build a docker image with the application binary.
 
+## Run the app
+
+```
+go run cmd/k8s-in-action-example/main.go
+```
+
 ## Build the docker image
 
 ```
@@ -20,3 +26,9 @@ curl localhost 8080/hello
 # => Hello, World!
 ```
 
+## Push the application to Docker Hub
+
+```
+docker login
+docker push percygrunwald/k8s-in-action-example
+```
